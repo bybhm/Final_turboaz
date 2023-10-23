@@ -584,6 +584,3 @@ window.addEventListener('load', renderCards(DataBase));
 navbtn.addEventListener('click', ResNaV);
 Form.addEventListener('submit', handleSubmit);
 
-// add offline for fix imgs
-// renderlist==0 olarsa loading olsun
-// add sort icon function

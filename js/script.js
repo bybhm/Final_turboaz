@@ -378,12 +378,19 @@ const DataBase = [
 const SelectOptions = () => {
     const marka = document.querySelector('.cars');
     const model = document.querySelector('.models');
-    const seher = document.querySelector('.citys');
+    const seher = document.querySelector('.citys');    
+    const uniqueMakes = new Set();
     DataBase.forEach((element, index) => {
-        const htmlElemValMake = `<option value='${element.Make}'>${element.Make}</option>`;
-        const htmlElemValModel = `<option value='${element.Model}'  key='${index}' >${element.Model}</option>`;
-        const htmlElemValLocation = `<option value='${element.Location}'  key='${index}' >${element.Location}</option>`;
-        marka.innerHTML += htmlElemValMake;
+        const make = element.Make;
+        const modelValue = element.Model;
+        const locationValue = element.Location;
+        if (!uniqueMakes.has(make)) {
+            const htmlElemValMake = `<option value='${make}'>${make}</option>`;
+            marka.innerHTML += htmlElemValMake;
+            uniqueMakes.add(make);
+        }
+        const htmlElemValModel = `<option value='${modelValue}' key='${index}'>${modelValue}</option>`;
+        const htmlElemValLocation = `<option value='${locationValue}' key='${index}'>${locationValue}</option>`;
         model.innerHTML += htmlElemValModel;
         seher.innerHTML += htmlElemValLocation;
     });

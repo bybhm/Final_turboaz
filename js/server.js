@@ -1,0 +1,10 @@
+/* 
+ele server yarat ki nodemon gibi islesin live server olsun 
+html css assert js olsun
+front end deveropment olsun
+for live server  and ipruvefive server nodemon 
+nodemon 
+express
+htttps
+
+*/
